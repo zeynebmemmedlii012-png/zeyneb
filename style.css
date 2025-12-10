@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%);
+    min-height: 100vh;
+    color: #4a2040;
+}
+
+/* Naviqasiya */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #ffc0cb;
+    color: #4a2040;
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Başlıqlar */
+h1 {
+    color: #c2185b;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 3px solid #ffc0cb;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Ana səhifə */
+.home-content {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffc0cb;
+    box-shadow: 0 5px 20px rgba(194, 24, 91, 0.3);
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.welcome-text {
+    font-size: 1.3rem;
+    color: #7b1fa2;
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Düymələr */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff69b4, #ffc0cb);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(194, 24, 91, 0.4);
+}
+
+.btn-back {
+    display: inline-block;
+    background: #c2185b;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.btn-back:hover {
+    background: #d81b60;
+    transform: translateX(-5px);
+}
+
+.back-home {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Haqqımda səhifəsi */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #ffc0cb;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Bacarıqlar */
+.skills-grid, .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-card, .hobby-card {
+    background: linear-gradient(135deg, #ffe0e9, #fff0f5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #ffc0cb;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover, .hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.2);
+    border-color: #ff69b4;
+}
+
+.skill-card h3, .hobby-card h3 {
+    color: #c2185b;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Əlaqə */
+.contact-info {
+    background: linear-gradient(135deg, #fff0f5, #ffe0e9);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    border: 2px solid #ffc0cb;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: #ff69b4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-info a {
+    color: #c2185b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil uyğunlaşdırma */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .skills-grid, .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
